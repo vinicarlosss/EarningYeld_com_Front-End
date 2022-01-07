@@ -1,0 +1,8 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Navbar button{
+    width: 50vw;
+}
