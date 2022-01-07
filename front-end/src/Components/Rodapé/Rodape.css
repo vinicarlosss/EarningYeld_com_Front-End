@@ -1,0 +1,21 @@
+.rodape{
+    position: absolute;
+    background-color: rgba(212, 205, 205, 0.671);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+}
+
+.rede_social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rede_social img{
+    margin: 15px;
+    height: 20px;
+}
