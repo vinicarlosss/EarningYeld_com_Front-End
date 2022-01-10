@@ -7,4 +7,4 @@ A aplicação pode ser visualizada nas imagens abaixo.
 
 
 
-img src="![Home.png](https://github.com/vinicarlosss/EarningYeld_com_Front-End/blob/main/front-end/Imagens/Home.png?raw=true)"
+![Home.png](https://github.com/vinicarlosss/EarningYeld_com_Front-End/blob/main/front-end/Imagens/Home.png?raw=true)
