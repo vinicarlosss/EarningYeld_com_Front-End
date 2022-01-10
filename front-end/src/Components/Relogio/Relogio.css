@@ -1,0 +1,5 @@
+.relogio{
+    display: flex;
+    justify-content: center;
+    color: rgba(206, 195, 110, 100);
+}
