@@ -3,3 +3,8 @@
     justify-content: center;
     color: rgba(206, 195, 110, 100);
 }
+
+.relogio:hover{
+    color: rgb(119, 0, 255);
+    transition-duration: 1s;
+}
