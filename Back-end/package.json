@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "back-end da aplicação earning yeld",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node ./",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +18,9 @@
   },
   "homepage": "https://github.com/vinicarlosss/EarningYeld_com_Front-End#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
   }
 }
