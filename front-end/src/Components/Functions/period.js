@@ -10,4 +10,5 @@ const period = () =>{
     }
 };
 
-export default period;
+
+export default (period);
