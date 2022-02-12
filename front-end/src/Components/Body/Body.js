@@ -1,6 +1,7 @@
 import React from 'react';
 import './Body.css';
-import Button from '../Button/Button';
+import linkPage from '../Functions/linkPage';
+
 import period from '../Functions/period';
 
 export default function Body(){
@@ -12,8 +13,8 @@ export default function Body(){
             <h1>{period() + ', seja bem vindo ao Ranking Earning Yeld'}</h1>
             <section className='box'>
                 <h4>Escolha uma opção para continuar:</h4>
-                <Button nome="Ranking de ações"/>
-                <Button nome="Informações sobre ação individual"/>
+                <button onClick={()=>linkPage('ranking')}>Ranking de ações</button>
+                <button onClick={()=>linkPage('info')}>Informações sobre ação individual</button>
             </section>
 
         </section>

@@ -1,21 +1,44 @@
-import React from 'react';
-import Logo from './Components/Logo/Logo';
-import Navbar from './Components/Navbar/Navbar';
-import Body from './Components/Body/Body';
-import Rodape from './Components/Rodapé/Rodape';
-import Relogio from './Components/Relogio/Relogio';
+import React, {useEffect,useState} from 'react';
+import Home from './Components/Home/Home';
+import Ranking from './Components/Ranking/Ranking';
+import About from './Components/About/About';
+import Info from './Components/Info/Info';
+
 
 
 const App = () =>{
+  
+  const [page,setPage] = useState('home')
 
+  useEffect(
+    () =>{
+      const url = window.location.href
+      const res = url.split('?')
+      setPage(res[1])
+      console.log(page)
+    }
+  )
+
+
+  const returnPage = () => {
+    if(page == 'home'){
+      return <Home/>
+    }else if(page == 'about'){
+      return <About/>
+    }else if(page == 'ranking'){
+      return <Ranking/>
+    }else if(page == 'info'){
+      return <Info/>
+    }else{
+      return (<>
+        <Home/>
+      </>
+      )}
+  }
 
   return(
     <>
-      <Logo/>
-      <Navbar/>
-      <Body/>
-      <Relogio/>
-      <Rodape/>
+      {returnPage()}
     </>
   );
 }

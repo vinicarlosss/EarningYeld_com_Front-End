@@ -24,3 +24,21 @@
 .body h4{
     color: rgba(206, 195, 110, 100);
 }
+
+.body button{
+    background-color: rgba(206, 195, 110, 100);
+    border-radius: 100px;
+    font-size: 15px;
+}
+
+.body button:hover{
+    background-color: yellow;
+    color: red;
+    border: solid;
+    transition-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.body button::after{
+    transition: 1s;
+}

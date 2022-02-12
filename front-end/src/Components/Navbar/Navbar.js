@@ -1,12 +1,15 @@
 import React from "react";
-import Button from "../Button/Button";
+
 import './Navbar.css';
 
+import linkPage from "../Functions/linkPage";
+
 export default function Navbar(){
+
     return(
         <section className="Navbar">
-            <Button nome="Início"/>
-            <Button nome="Sobre"/>
+            <button onClick={()=>linkPage('home')}>Inicio</button>
+            <button onClick={()=>linkPage('about')}>Sobre</button>
         </section>
     );
 }
