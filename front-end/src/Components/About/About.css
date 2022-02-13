@@ -1,0 +1,21 @@
+
+.about h1{
+    display: flex;
+    margin: 10px;
+    color: rgba(206, 195, 110, 100);
+    justify-content: center;
+}
+
+.about p{
+    color: rgba(206, 195, 110, 100);
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.img img{
+    width: 10vw;
+}
+

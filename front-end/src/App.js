@@ -3,6 +3,7 @@ import Home from './Components/Home/Home';
 import Ranking from './Components/Ranking/Ranking';
 import About from './Components/About/About';
 import Info from './Components/Info/Info';
+import './App.css';
 
 
 
@@ -37,9 +38,11 @@ const App = () =>{
   }
 
   return(
-    <>
+    <div className='geral'>
       {returnPage()}
-    </>
+    </div>
+      
+
   );
 }
 

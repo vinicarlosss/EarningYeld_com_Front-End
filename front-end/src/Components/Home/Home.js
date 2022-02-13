@@ -5,6 +5,8 @@ import Body from "../Body/Body";
 import Relogio from "../Relogio/Relogio";
 import Rodape from "../Rodapé/Rodape";
 
+
+
 export default function Home(){
     return(
         <>
@@ -12,7 +14,12 @@ export default function Home(){
             <Navbar/>
             <Body/>
             <Relogio/>
-            <Rodape/>
+            <div className="rodape">
+                <Rodape/>
+            </div>
+            
+            
+            
         </>
     )
 }
