@@ -16,7 +16,6 @@ const App = () =>{
       const url = window.location.href
       const res = url.split('?')
       setPage(res[1])
-      console.log(page)
     }
   )
 
