@@ -7,6 +7,13 @@ import './App.css';
 
 
 
+const preencherTabela = (dados) =>{
+  dados.forEach(item => {
+    return<h1>ok</h1>
+  })
+}
+  
+
 const App = () =>{
   
   const [page,setPage] = useState('home')

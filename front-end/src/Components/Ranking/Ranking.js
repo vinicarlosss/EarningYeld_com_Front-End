@@ -9,7 +9,7 @@ const cssTitulo = {
 }
 
 const cssTable = {
-
+    width: '80vw',
     borderCollapse:'collapse',   
 }
 
@@ -24,6 +24,7 @@ const dados = [
     {posicao:2,ticker:'CGRA4', empresa:'GRAZIOTIN', ey:20.2},
     {posicao:3,ticker:'ITUB4', empresa:'ITAU', ey:20.2},
     {posicao:4,ticker:'ENAT3', empresa:'ENAUTA', ey:20.2},
+    {posicao:5,ticker:'alup3', empresa:'alupar', ey:20.2}
 ]
 
 
@@ -43,12 +44,22 @@ export default function Ranking(){
                 <table border='5' style={cssTable}>
                     <thead>
                         <tr>
-                            <th>Posição</th>
+                            <th style={{width:'1vw'}}>Posição</th>
                             <th>Ticker</th>
                             <th>Nome da empresa</th>
                             <th>Earning yeld</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        {dados.map((item)=>(
+                            <tr>
+                                <td>{item.posicao}</td>
+                                <td>{item.ticker}</td>
+                                <td>{item.empresa}</td>
+                                <td>{item.ey}</td>
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
             </div>
 
