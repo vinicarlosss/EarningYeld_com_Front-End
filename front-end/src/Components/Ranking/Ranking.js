@@ -51,7 +51,7 @@ export default class Ranking extends React.Component{
                         <tbody>
                         {this.state.dados.map((item)=>(
                             <tr  key={this.state.dados.indexOf(item)}>
-                                <td>{this.state.dados.indexOf(item)+1}</td>
+                                <td>{this.state.dados.indexOf(item)+1 +'º'}</td>
                                 <td >{item.ticker}</td>
                                 <td style={{display:'flex',justifyContent:'center'}}>{item.nome_empresa}</td>
                                 <td >{item.earning_yeld+ '%'}</td>

@@ -5,6 +5,7 @@ import About from './Components/About/About';
 import Info from './Components/Info/Info';
 import './App.css';
 
+
 const App = () =>{
   const [page,setPage] = useState('home')
 
