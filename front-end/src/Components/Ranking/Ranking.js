@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import Logo from "../Logo/Logo";
 import Navbar from "../Navbar/Navbar";
@@ -19,50 +20,49 @@ const cssDivTable = {
     color: 'rgba(206, 195, 110, 100)'
 }
 
-const dados = [
-    {posicao:1,ticker:'PETR4', empresa:'Petrobras', ey:20.2},
-    {posicao:2,ticker:'CGRA4', empresa:'GRAZIOTIN', ey:20.2},
-    {posicao:3,ticker:'ITUB4', empresa:'ITAU', ey:20.2},
-    {posicao:4,ticker:'ENAT3', empresa:'ENAUTA', ey:20.2},
-    {posicao:5,ticker:'alup3', empresa:'alupar', ey:20.2}
-]
 
-
-/*{dados.forEach(item=>{return (<tr>
-    <td>{item.posicao}</td>
-    <td>{item.ticker}</td>
-    <td>{item.empresa}</td>
-    <td>{item.ey}</td>
-</tr>)})}*/
-export default function Ranking(){
-    return(
-        <div>
-            <Logo/>
-            <Navbar/>
-            <h1 style={cssTitulo}>Ranking de informações:</h1>
-            <div style={cssDivTable}>
-                <table border='5' style={cssTable}>
-                    <thead>
-                        <tr>
-                            <th style={{width:'1vw'}}>Posição</th>
-                            <th>Ticker</th>
-                            <th>Nome da empresa</th>
-                            <th>Earning yeld</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {dados.map((item)=>(
+export default class Ranking extends React.Component{
+    state={
+        dados:[],
+    }
+    componentDidMount(){
+        axios.get('http://localhost:5000/listar-ranking')
+        .then(res=>{
+            const dadosEmpresas = res.data
+            this.setState({dados:dadosEmpresas})
+        })
+    }
+    render(){
+        return(
+            <div>
+                <Logo/>
+                <Navbar/>
+                <h1 style={cssTitulo}>Ranking de informações:</h1>
+                <div style={cssDivTable}>
+                    <table border='5' style={cssTable}>
+                        <thead>
                             <tr>
-                                <td>{item.posicao}</td>
-                                <td>{item.ticker}</td>
-                                <td>{item.empresa}</td>
-                                <td>{item.ey}</td>
+                                <th style={{width:'1vw'}}>Posição</th>
+                                <th>Ticker</th>
+                                <th>Nome da empresa</th>
+                                <th>Earning yeld</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {this.state.dados.map((item)=>(
+                            <tr  key={this.state.dados.indexOf(item)}>
+                                <td>{this.state.dados.indexOf(item)+1}</td>
+                                <td >{item.ticker}</td>
+                                <td style={{display:'flex',justifyContent:'center'}}>{item.nome_empresa}</td>
+                                <td >{item.earning_yeld+ '%'}</td>
                             </tr>
                         ))}
                     </tbody>
-                </table>
+                    </table>
+                </div>
+    
             </div>
+        )
+    }
 
-        </div>
-    )
 }
