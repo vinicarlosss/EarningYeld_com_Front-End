@@ -30,9 +30,8 @@ connection.connect(function(error)
 
 //rota para requisitar dados de uma empresa
 router.get('/listar-empresa', (req,res)=>{
-    let ticker = prompt('digite');
     console.log(req)
-    connection.query(`SELECT * FROM Empresa WHERE ticker = '${ticker}';`,
+    connection.query(`SELECT * FROM Empresa ;`,
     (error, rows) =>{
         if(!!error){
             res.send(error);
@@ -44,7 +43,7 @@ router.get('/listar-empresa', (req,res)=>{
 
 //rota para requisitar dados do ranking
 router.get('/listar-ranking', (req,res)=>{
-    connection.query('SELECT * FROM ranking ORDER BY earning_yeld DESC',
+    connection.query('SELECT * FROM ranking  ORDER BY earning_yeld DESC',
     (error, rows) =>{
         if(!!error){
             res.send(error);

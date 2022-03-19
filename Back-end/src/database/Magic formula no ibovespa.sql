@@ -12,6 +12,7 @@ create table Empresa(
 
 create table ranking(
 	ticker varchar(10) not null,
+	nome_empresa varchar(45),
 	earning_yeld double not null,
 	primary key(ticker));
 
